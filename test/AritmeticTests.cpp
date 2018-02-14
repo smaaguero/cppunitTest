@@ -9,7 +9,7 @@
 static const double delta=0.1;
 
 void AritmeticTests::testSum_1() {
-    CPPUNIT_ASSERT_DOUBLES_EQUAL(Aritmetic::sum(5,3), 8,delta);
+    CPPUNIT_ASSERT_DOUBLES_EQUAL(Aritmetic::sum(5,3), 9,delta);
 }
 
 void AritmeticTests::testSum_2() {
