@@ -4,23 +4,17 @@ pipeline {
 	    disableConcurrentBuilds()
 	  }
     stages {
-	stage('Running tests') {
-		steps {
+  stage('Running cpp tests') {
+  	steps {
 		  sh '''#!/bin/bash
-      mkdir -p build
-      cd build
-      cmake .. -DUSEXUNIT=ON
-      make -j4
-      ./build/test/aritTest
-		    '''
-		}
-	}
-        stage('Last stage'){
-	    agent any
-            steps {
-		sh 'sleep(10)'
-	    }
-        }
+          mkdir -p build
+          cd build
+          cmake .. -DUSEXUNIT=ON
+          make -j4
+          ./test/aritTest
+          '''
+  	}
+  }
     }
   post {
     always {
