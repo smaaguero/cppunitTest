@@ -18,7 +18,7 @@ pipeline {
     }
   post {
     always {
-        xunit '**/testResult.xml'
+        xunit '**/build/testResult.xml'
         cleanWs()
     }
   }
